@@ -1,26 +1,19 @@
-# Employee Kudos Management Portal using Django
+# Event Service API using Django Rest Framework
 
-An application that enables employees to give kudos to their colleagues in their organisation
+An application that gives API endpoints to an event management service written using Django Rest Framework
 <br />
 <br />
 Some of the features included:
-<li><b>Registering and Login of employees</b></li>
-<li><b>Giving kudos to only their colleagues</b></li>
-<li><b>Uploading employee details and kudos details in bulk</b></li>
-<li><b>Allocating a certain number of kudos for each employee each week</b></li>
-<li><b> Resetting the kudos count at the end of the week</b></li>
-<li><b>Using partials, base html file for template code modularity</b></li>
-<li><b>Using Django alert messages for success and error messages</b></li>
-<li><b>Admin section</b> - allowing an admin/superuser to perform CRUD operations on employee, employee profile, company, kudos information</li>
-<li><b>Using both frontend and DB constraints and checks</b></li>
+<li><b>CRUD operations on Events, cities where events are held, participant details and rating of events by participants</b></li>
+<li><b>Filtered views to filter events by City or/and date</b></li>
+<li><b>Views written using ViewSets and amanged by a router</b></li>
+<li><b>Single Serializer per model</b></li>
 <br />
 <br />
 <b>Technical Details:</b>
 <br />
 <br />
-<b>Frontend:</b> HTML, JS, CSS (Bootstrap theme: https://bootswatch.com/cosmo/)
-<br />
-<b>Framework:</b> Python, Django authentication, messages, etc
+<b>Framework:</b> Python, Django, Django-Rest-Framework, Viewsets, Routers, etc
 <br />
 <b>Database:</b> SQLite
 <br />
@@ -28,18 +21,18 @@ Some of the features included:
 <b>Models used:</b>
 <br />
 <br />
-<b>User</b> (first_name, last_name, username, email, password)
+<b>City</b> (name)
 <br />
-<b>Profile</b> (user, company, kudosCount, kudosLastUpdated)
+<b>Participant</b> (full_name, city)
 <br />
-<b>Company</b> (name)
+<b>Event</b> (name, city, date)
 <br />
-<b>Kudos</b> (fromColleague, toColleague, message, created_at)
+<b>Rating</b> (event, participant, interested, rating)
 <br />
 <br />
 <b>Requirements of the app:</b>
 <br />
-<a href="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/requirements.txt">Link</a>
+<a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/requirements.txt">Link</a>
 <br />
 <br />
 <b>To run the app:</b>
@@ -47,13 +40,13 @@ Some of the features included:
 <br />
 <p>1. Clone the repo</p>
 <br />
-<pre><code>git clone https://github.com/tebbythomas/Django-Employee-Kudos-Management.git
+<pre><code>git clone https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework.git
 </code></pre>
 <br />
 <br />
 <p>2. Switch to project dir</p>
 <br />
-<pre><code>cd Django-Employee-Kudos-Management/
+<pre><code>cd Event_Service_API_Django_Rest_Framework-master/
 </code></pre>
 <br />
 <br />
@@ -77,7 +70,7 @@ Some of the features included:
 <br />
 <p>6. Switch to django project dir</p>
 <br />
-<pre><code>cd kudos_manager/
+<pre><code>cd event_service_project/
 </code></pre>
 <br />
 <br />
@@ -102,56 +95,44 @@ Some of the features included:
 </code></pre>
 <br />
 <br />
-<p>10. Open <a href="http://localhost:8000">http://localhost:8000</a> in your browser</p>
+<p>10. Run API requests either using the browser: <a href="127.0.0.1:8000/api/v1/">127.0.0.1:8000/api/v1/</a> or using Postman, etc</p>
 <br />
 <br />
-<p>11. First upload sample employee data: Visit <a href="http://localhost:8000/upload/employees">http://localhost:8000/upload/employees</a> and upload following csv file:
+<p>Postman collections used to test the project are located here:
 <br />
-<a href="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Sample_Data/Sample_Data_1/upload_employees_1.csv">Link</a>
-<br />
-<br />
-<p>12. Next upload sample kudos data: Visit <a href="http://localhost:8000/upload/kudos">http://localhost:8000/upload/kudos</a> and upload following csv file:
-<br />
-<a href="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Sample_Data/Sample_Data_1/upload_kudos_1.csv">Link</a>
-<br />
-<br />
-<p>Other sample csv files are here:</p>
-<a href="https://github.com/tebbythomas/Django-Employee-Kudos-Management/tree/master/Sample_Data">Link</a>
+<a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Event_Service_Collection.postman_collection.json">Link</a>
 <br />
 <br />
 <b>Screenshots:</b>
 <br />
 <br />
-1. <b>Register Employee Page</b>:
+1. <b>Get All events</b>:
 <br />
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Register_Screen.png" hspace="20">
-<br />
-<br />
-2. <b>Login Employee Page</b>:
-<br />
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Login_Screen.png" hspace="20">
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Screenshots/Event_Requests/Get_All_Events.png" hspace="20">
 <br />
 <br />
-3. <b>Home Page / Dashboard</b>:
+2. <b>Get Individual Event</b>:
 <br />
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Dashboard.png" hspace="20">
-<br />
-<br />
-4. <b>Upload Employee Details</b>:
-<br />
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Upload_Employees.png" hspace="20">
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Screenshots/Event_Requests/Get_Individual_Event.png" hspace="20">
 <br />
 <br />
-5. <b>Upload Kudos Details</b>:
+3. <b>Get Filtered Events</b>:
 <br />
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Upload_Kudos.png" hspace="20">
-<br />
-<br />
-6.a. <b>To test Reset Kudos Count - First, login to the Admin Page->Profile table-> Choose user and change kudosLastUpdated Date to a previous week's date and save</b>:
-<br />
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Manually_Changing_Date.png" hspace="20">
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Screenshots/Event_Requests/Get_Events_Filtered_By.png" hspace="20">
 <br />
 <br />
-6.b. <b>To test Reset Kudos Count - Next, login and visit the homepage / dashboard of the same user, you will get an alert mentioning that the kudos count was reset</b>:
-<img src="https://github.com/tebbythomas/Django-Employee-Kudos-Management/blob/master/Screenshots/Resetting_Kudos.png" hspace="20">
+4. <b>Get all users</b>:
+<br />
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/tree/master/Screenshots/Users_Requests" hspace="20">
+<br />
+<br />
+5. <b>Add Rating</b>:
+<br />
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Screenshots/Rating_Requests/Add_Rating.png" hspace="20">
+<br />
+<br />
+6. <b>Get Ratings</b>:
+<br />
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Screenshots/Rating_Requests/Get_All_Ratings.png" hspace="20">
+<br />
 <br />
