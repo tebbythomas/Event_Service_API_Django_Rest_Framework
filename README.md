@@ -98,9 +98,9 @@ Some of the features included:
 <p>10. Run API requests either using the browser: <a href="127.0.0.1:8000/api/v1/">127.0.0.1:8000/api/v1/</a> or using Postman, etc</p>
 <br />
 <br />
-<h3><b>Postman collections used to test the project are located here:</b></h3>
+<h3><b>Postman collections used to test the project are located here:</b>
 <br />
-<a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Event_Service_Collection.postman_collection.json">Link</a>
+<a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Event_Service_Collection.postman_collection.json">Link</a></h3>
 <br />
 <br />
 <b>Screenshots:</b>
