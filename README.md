@@ -4,7 +4,7 @@ An application that gives API endpoints to an event management service written u
 <br />
 <br />
 Some of the features included:
-<li><b>CRUD operations on Events, cities where events are held, participant details and rating of events by participants</b></li>
+<li><b>CRUD operations on Events, Cities where events are held, Participant details and Ratings of events by participants</b></li>
 <li><b>Filtered views to filter events by City or/and date</b></li>
 <li><b>Views written using ViewSets and amanged by a router</b></li>
 <li><b>Single Serializer per model</b></li>
