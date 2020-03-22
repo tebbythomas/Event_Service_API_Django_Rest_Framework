@@ -6,7 +6,7 @@ An application that gives API endpoints to an event management service written u
 Some of the features included:
 <li><b>CRUD operations on Events, Cities where events are held, Participant details and Ratings of events by participants</b></li>
 <li><b>Filtered views to filter events by City or/and date</b></li>
-<li><b>Views written using ViewSets and amanged by a router</b></li>
+<li><b>Views written using ViewSets and managed by a router</b></li>
 <li><b>Single Serializer per model</b></li>
 <br />
 <br />
@@ -123,7 +123,7 @@ Some of the features included:
 <br />
 4. <b>Get all users</b>:
 <br />
-<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/tree/master/Screenshots/Users_Requests" hspace="20">
+<img src="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Screenshots/Users_Requests/Get_All_Users.png" hspace="20">
 <br />
 <br />
 5. <b>Add Rating</b>:
