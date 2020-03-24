@@ -98,9 +98,9 @@ An application that gives API endpoints to an event management service written u
 <p>10. Run API requests either using the browser: <a href="127.0.0.1:8000/api/v1/">127.0.0.1:8000/api/v1/</a> or using Postman, etc</p>
 <br />
 <br />
-<h3><b>Postman collections used to test the project are located here:</b>
+<h2>Postman collections used to test the project are located here:</h2>
 <br />
-<a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Event_Service_Collection.postman_collection.json">Link</a></h3>
+<a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Event_Service_Collection.postman_collection.json">Link</a>
 <br />
 <br />
 <h2>Screenshots:</h2>
