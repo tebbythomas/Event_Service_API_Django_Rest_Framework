@@ -3,14 +3,14 @@
 An application that gives API endpoints to an event management service written using Django Rest Framework
 <br />
 <br />
-Some of the features included:
-<li><b>CRUD operations on Events, Cities where events are held, Participant details and Ratings of events by participants</b></li>
-<li><b>Filtered views to filter events by City or/and date</b></li>
-<li><b>Views written using ViewSets and managed by a router</b></li>
-<li><b>Single Serializer per model</b></li>
+<h2>Some of the features included:</h2>
+<li>CRUD operations on Events, Cities where events are held, Participant details and Ratings of events by participants</li>
+<li>Filtered views to filter events by City or/and date</li>
+<li>Views written using ViewSets and managed by a router</li>
+<li>Single Serializer per model</li>
 <br />
 <br />
-<b>Technical Details:</b>
+<h2>Technical Details:</h2>
 <br />
 <br />
 <b>Framework:</b> Python, Django, Django-Rest-Framework, Viewsets, Routers, etc
@@ -18,7 +18,7 @@ Some of the features included:
 <b>Database:</b> SQLite
 <br />
 <br /> 
-<b>Models used:</b>
+<h2>Models used:</h2>
 <br />
 <br />
 <b>City</b> (name)
@@ -30,12 +30,12 @@ Some of the features included:
 <b>Rating</b> (event, participant, interested, rating)
 <br />
 <br />
-<b>Requirements of the app:</b>
+<h2>Requirements of the app:</h2>
 <br />
 <a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/requirements.txt">Link</a>
 <br />
 <br />
-<b>To run the app:</b>
+<h2>To run the app:</h2>
 <br />
 <br />
 <p>1. Clone the repo</p>
@@ -103,7 +103,7 @@ Some of the features included:
 <a href="https://github.com/tebbythomas/Event_Service_API_Django_Rest_Framework/blob/master/Event_Service_Collection.postman_collection.json">Link</a></h3>
 <br />
 <br />
-<b>Screenshots:</b>
+<h2>Screenshots:</h2>
 <br />
 <br />
 1. <b>Get All events</b>:
