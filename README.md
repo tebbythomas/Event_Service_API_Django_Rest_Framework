@@ -95,7 +95,7 @@ An application that gives API endpoints to an event management service written u
 </code></pre>
 <br />
 <br />
-<p>10. Run API requests either using the browser: <a href="127.0.0.1:8000/api/v1/">127.0.0.1:8000/api/v1/</a> or using Postman, etc</p>
+<p>10. Run API requests either using the browser: <a href="http://localhost:8000/api/v1/"> http://localhost:8000/api/v1/</a> or using Postman, etc</p>
 <br />
 <br />
 <h2>Postman collections used to test the project are located here:</h2>
